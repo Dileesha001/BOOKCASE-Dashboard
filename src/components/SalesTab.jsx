@@ -121,11 +121,11 @@ export default function SalesTab({
           </div>
           <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.82rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <div style={{ width: '12px', height: '12px', borderRadius: '3px', background: '#10B981' }} />
+              <div style={{ width: '12px', height: '12px', borderRadius: '3px', background: '#10B981', flexShrink: 0 }} />
               <span>Sales Revenue (LKR)</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <div style={{ width: '12px', height: '12px', borderRadius: '3px', background: '#D4A017' }} />
+              <div style={{ width: '12px', height: '12px', borderRadius: '3px', background: '#D4A017', flexShrink: 0 }} />
               <span>Book Units Sold</span>
             </div>
           </div>
@@ -187,7 +187,7 @@ export default function SalesTab({
         gap: '1.5rem'
       }}>
         {/* Genre Share Breakdown */}
-        <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
+        <div className="glass-card card-flex" style={{ padding: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
             <h4 className="heading-serif" style={{ fontSize: '1.15rem', margin: 0 }}>
               Sales Share by Category & Genre
@@ -214,7 +214,7 @@ export default function SalesTab({
         </div>
 
         {/* Top 5 Bestsellers Leaderboard */}
-        <div className="glass-card" style={{ padding: '1.5rem' }}>
+        <div className="glass-card card-flex" style={{ padding: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
             <h4 className="heading-serif" style={{ fontSize: '1.15rem', margin: 0 }}>
               Top Selling Titles Leaderboard
@@ -244,7 +244,8 @@ export default function SalesTab({
                     fontSize: '0.8rem',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    flexShrink: 0
                   }}>
                     #{index + 1}
                   </div>
@@ -280,29 +281,29 @@ export default function SalesTab({
         <table className="custom-table">
           <thead>
             <tr>
-              <th>Order ID</th>
-              <th>Date & Time</th>
-              <th>Customer Name</th>
-              <th>Book Title Purchased</th>
-              <th>Qty</th>
-              <th>Payment Method</th>
-              <th>Total Amount</th>
-              <th>Fulfillment</th>
+              <th className="text-left">Order ID</th>
+              <th className="text-left">Date & Time</th>
+              <th className="text-left">Customer Name</th>
+              <th className="text-left">Book Title Purchased</th>
+              <th className="text-center">Qty</th>
+              <th className="text-left">Payment Method</th>
+              <th className="text-right">Total Amount</th>
+              <th className="text-center">Fulfillment</th>
             </tr>
           </thead>
           <tbody>
             {filteredTransactions.map((tx) => (
               <tr key={tx.id}>
-                <td style={{ fontWeight: 600, color: 'var(--text-gold)' }}>{tx.id}</td>
-                <td style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>{tx.date}</td>
-                <td style={{ fontWeight: 500 }}>{tx.customer}</td>
-                <td style={{ color: '#FFF' }}>{tx.bookTitle}</td>
-                <td>{tx.qty}</td>
-                <td>
+                <td className="text-left" style={{ fontWeight: 600, color: 'var(--text-gold)' }}>{tx.id}</td>
+                <td className="text-left" style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>{tx.date}</td>
+                <td className="text-left" style={{ fontWeight: 500 }}>{tx.customer}</td>
+                <td className="text-left" style={{ color: '#FFF' }}>{tx.bookTitle}</td>
+                <td className="text-center">{tx.qty}</td>
+                <td className="text-left">
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{tx.paymentMethod}</span>
                 </td>
-                <td style={{ fontWeight: 700, color: '#34D399' }}>LKR {tx.total.toLocaleString()}</td>
-                <td>
+                <td className="text-right" style={{ fontWeight: 700, color: '#34D399' }}>LKR {tx.total.toLocaleString()}</td>
+                <td className="text-center">
                   <span className={`badge ${tx.status === 'Completed' ? 'badge-emerald' : 'badge-amber'}`}>
                     {tx.status}
                   </span>

@@ -169,7 +169,7 @@ export default function AddBookModal({ isOpen, onClose, onAddBook }) {
               />
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', paddingTop: '1.25rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingBottom: '0.65rem' }}>
               <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.85rem' }}>
                 <input 
                   type="checkbox" 

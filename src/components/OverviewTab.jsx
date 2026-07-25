@@ -283,17 +283,17 @@ export default function OverviewTab({ kpiMetrics, inventory, salesTimeline, rece
           </p>
 
           <div style={{ margin: '1rem 0', padding: '0.85rem', background: 'rgba(5, 12, 8, 0.6)', borderRadius: '10px', border: '1px solid rgba(212, 160, 23, 0.2)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', marginBottom: '0.35rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', marginBottom: '0.35rem' }}>
               <span style={{ color: 'var(--text-muted)' }}>Total Sells</span>
               <strong style={{ color: '#F7D070' }}>420 Copies</strong>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', marginBottom: '0.35rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', marginBottom: '0.35rem' }}>
               <span style={{ color: 'var(--text-muted)' }}>Current Price</span>
-              <strong>LKR 1,960 <span style={{ textDecoration: 'line-through', color: '#6B7280', fontSize: '0.7rem' }}>2,450</span></strong>
+              <strong style={{ display: 'flex', alignItems: 'baseline', gap: '0.35rem' }}>LKR 1,960 <span style={{ textDecoration: 'line-through', color: '#6B7280', fontSize: '0.7rem' }}>2,450</span></strong>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem' }}>
               <span style={{ color: 'var(--text-muted)' }}>Stock Status</span>
-              <span style={{ color: '#34D399', fontWeight: 600 }}>🟢 142 In Stock</span>
+              <span style={{ color: '#34D399', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>🟢 142 In Stock</span>
             </div>
           </div>
 
@@ -310,7 +310,7 @@ export default function OverviewTab({ kpiMetrics, inventory, salesTimeline, rece
         gap: '1.5rem'
       }}>
         {/* Recent Transactions */}
-        <div className="glass-card" style={{ padding: '1.5rem' }}>
+        <div className="glass-card card-flex" style={{ padding: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
             <h3 className="heading-serif" style={{ fontSize: '1.15rem', margin: 0 }}>
               Recent Sanctuary Sales
@@ -323,21 +323,21 @@ export default function OverviewTab({ kpiMetrics, inventory, salesTimeline, rece
           <table className="custom-table">
             <thead>
               <tr>
-                <th>Order ID</th>
-                <th>Customer</th>
-                <th>Book Title</th>
-                <th>Total</th>
-                <th>Status</th>
+                <th className="text-left">Order ID</th>
+                <th className="text-left">Customer</th>
+                <th className="text-left">Book Title</th>
+                <th className="text-right">Total</th>
+                <th className="text-center">Status</th>
               </tr>
             </thead>
             <tbody>
               {recentTransactions.slice(0, 4).map((tx) => (
                 <tr key={tx.id}>
-                  <td style={{ fontWeight: 600, color: 'var(--text-gold)' }}>{tx.id}</td>
-                  <td>{tx.customer}</td>
-                  <td style={{ color: '#FFF' }}>{tx.bookTitle}</td>
-                  <td style={{ fontWeight: 600 }}>LKR {tx.total.toLocaleString()}</td>
-                  <td>
+                  <td className="text-left" style={{ fontWeight: 600, color: 'var(--text-gold)' }}>{tx.id}</td>
+                  <td className="text-left">{tx.customer}</td>
+                  <td className="text-left" style={{ color: '#FFF' }}>{tx.bookTitle}</td>
+                  <td className="text-right" style={{ fontWeight: 600 }}>LKR {tx.total.toLocaleString()}</td>
+                  <td className="text-center">
                     <span className={`badge ${tx.status === 'Completed' ? 'badge-emerald' : 'badge-amber'}`}>
                       {tx.status}
                     </span>

@@ -124,8 +124,8 @@ export default function GoalProgressTab({ goals, setGoals }) {
         gap: '1.5rem'
       }}>
         {goals.map((goal) => (
-          <div key={goal.id} className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div key={goal.id} className="glass-card card-flex" style={{ padding: '1.5rem', gap: '1rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span className="badge badge-gold" style={{ fontSize: '0.7rem' }}>
                 {goal.category}
               </span>
@@ -139,12 +139,12 @@ export default function GoalProgressTab({ goals, setGoals }) {
                 {goal.title}
               </h4>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-                <Calendar size={13} /> Target Date: {goal.dueDate}
+                <Calendar size={13} style={{ flexShrink: 0 }} /> Target Date: {goal.dueDate}
               </div>
             </div>
 
-            <div style={{ marginTop: '0.5rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+            <div style={{ marginTop: 'auto' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.85rem', marginBottom: '0.4rem' }}>
                 <span style={{ color: 'var(--text-muted)' }}>
                   Current: <strong>{goal.current} {goal.unit}</strong>
                 </span>

@@ -88,11 +88,11 @@ export default function InventoryTab({
           background: 'rgba(245, 158, 11, 0.08)',
           border: '1px solid rgba(245, 158, 11, 0.3)',
           display: 'flex',
-          justify: 'space-between',
+          justifyContent: 'space-between',
           alignItems: 'center'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-            <AlertTriangle size={24} color="#FBBF24" />
+            <AlertTriangle size={24} color="#FBBF24" style={{ flexShrink: 0 }} />
             <div>
               <strong style={{ color: '#FBBF24', fontSize: '0.92rem' }}>
                 Restock Alert: {lowStockCount} Titles Require Stock Replenishment
@@ -155,23 +155,23 @@ export default function InventoryTab({
         <table className="custom-table">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Book Title & Details</th>
-              <th>Category</th>
-              <th>Price (LKR)</th>
-              <th>Stock Status</th>
-              <th>Units Available</th>
-              <th>Sales Count</th>
-              <th>Quick Restock</th>
+              <th className="text-left">ID</th>
+              <th className="text-left">Book Title & Details</th>
+              <th className="text-center">Category</th>
+              <th className="text-right">Price (LKR)</th>
+              <th className="text-center">Stock Status</th>
+              <th className="text-center">Units Available</th>
+              <th className="text-right">Sales Count</th>
+              <th className="text-center">Quick Restock</th>
             </tr>
           </thead>
           <tbody>
             {filteredBooks.map((book) => (
               <tr key={book.id}>
-                <td style={{ fontWeight: 600, color: 'var(--text-gold)', fontSize: '0.82rem' }}>
+                <td className="text-left" style={{ fontWeight: 600, color: 'var(--text-gold)', fontSize: '0.82rem' }}>
                   {book.id}
                 </td>
-                <td>
+                <td className="text-left">
                   <div>
                     <div style={{ fontWeight: 600, color: '#FFF', fontSize: '0.92rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       {book.title}
@@ -186,12 +186,12 @@ export default function InventoryTab({
                     </span>
                   </div>
                 </td>
-                <td>
+                <td className="text-center">
                   <span className="badge badge-gold" style={{ opacity: 0.85 }}>
                     {book.category}
                   </span>
                 </td>
-                <td style={{ fontWeight: 600 }}>
+                <td className="text-right" style={{ fontWeight: 600 }}>
                   LKR {book.price.toLocaleString()}
                   {book.discountPrice && (
                     <span style={{ fontSize: '0.75rem', color: '#34D399', display: 'block' }}>
@@ -199,7 +199,7 @@ export default function InventoryTab({
                     </span>
                   )}
                 </td>
-                <td>
+                <td className="text-center">
                   {book.status === 'in-stock' && (
                     <span className="badge badge-emerald">🟢 In Stock</span>
                   )}
@@ -210,7 +210,7 @@ export default function InventoryTab({
                     <span className="badge badge-crimson">🔴 Sold Out</span>
                   )}
                 </td>
-                <td>
+                <td className="text-center">
                   <span style={{
                     fontSize: '1rem',
                     fontWeight: 700,
@@ -219,11 +219,11 @@ export default function InventoryTab({
                     {book.stock} units
                   </span>
                 </td>
-                <td style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+                <td className="text-right" style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
                   {book.salesCount} sold
                 </td>
-                <td>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                <td className="text-center">
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem' }}>
                     <button
                       onClick={() => updateStock(book.id, -1)}
                       style={{

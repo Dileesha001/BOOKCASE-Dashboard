@@ -147,7 +147,8 @@ export default function Sidebar({ activeTab, setActiveTab, lowStockCount, totalB
             paddingTop: '0.75rem', 
             borderTop: '1px solid rgba(16, 185, 129, 0.2)',
             display: 'flex',
-            justify: 'space-between',
+            justifyContent: 'space-between',
+            alignItems: 'center',
             fontSize: '0.75rem'
           }}>
             <span style={{ color: 'var(--text-muted)' }}>Store Status</span>
