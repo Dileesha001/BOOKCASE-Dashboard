@@ -121,7 +121,7 @@ export default function OverviewTab({
           <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
               <div>
-                <h4 className="heading-serif" style={{ fontSize: '1.15rem', margin: 0, color: '#FFF' }}>
+                <h4 className="heading-serif" style={{ fontSize: '1.15rem', margin: 0, color: 'var(--text-main)' }}>
                   Sales Revenue & Order Velocity
                 </h4>
                 <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
@@ -186,7 +186,7 @@ export default function OverviewTab({
           <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
               <div>
-                <h4 className="heading-serif" style={{ fontSize: '1.15rem', margin: 0, color: '#FFF' }}>
+                <h4 className="heading-serif" style={{ fontSize: '1.15rem', margin: 0, color: 'var(--text-main)' }}>
                   Revenue Projection & Goal Milestones
                 </h4>
                 <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
@@ -234,7 +234,7 @@ export default function OverviewTab({
           
           {/* Sales Share by Category & Genre */}
           <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <h4 className="heading-serif" style={{ fontSize: '1.1rem', margin: '0 0 1rem 0', alignSelf: 'flex-start', color: '#FFF' }}>
+            <h4 className="heading-serif" style={{ fontSize: '1.1rem', margin: '0 0 1rem 0', alignSelf: 'flex-start', color: 'var(--text-main)' }}>
               Sales Share by Category & Genre
             </h4>
 
@@ -280,7 +280,7 @@ export default function OverviewTab({
 
           {/* Inventory Catalog Health Breakdown */}
           <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <h4 className="heading-serif" style={{ fontSize: '1.1rem', margin: '0 0 1rem 0', alignSelf: 'flex-start', color: '#FFF' }}>
+            <h4 className="heading-serif" style={{ fontSize: '1.1rem', margin: '0 0 1rem 0', alignSelf: 'flex-start', color: 'var(--text-main)' }}>
               Inventory Stock Health
             </h4>
 
@@ -378,12 +378,12 @@ export default function OverviewTab({
                 #1 Bestseller Title
               </span>
             </div>
-            <h5 className="heading-serif" style={{ fontSize: '1.1rem', color: '#FFF', margin: 0 }}>
+            <h5 className="heading-serif" style={{ fontSize: '1.1rem', color: 'var(--text-main)', margin: 0 }}>
               Mandodari (මන්දෝදරී)
             </h5>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>by Mohan Raj Madawala</span>
             
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', background: 'rgba(5, 12, 8, 0.6)', padding: '0.5rem 0.75rem', borderRadius: '8px', marginTop: '0.25rem' }}>
+            <div className="sidebar-sub-box" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', marginTop: '0.25rem' }}>
               <span style={{ color: '#F7D070', fontWeight: 700 }}>420 Copies Sold</span>
               <span style={{ color: '#34D399', fontWeight: 600 }}>🟢 142 In Stock</span>
             </div>
@@ -400,7 +400,7 @@ export default function OverviewTab({
                 BO
               </div>
               <div>
-                <h5 style={{ margin: 0, fontSize: '0.88rem', color: '#FFF', fontWeight: 700 }}>Have questions?</h5>
+                <h5 style={{ margin: 0, fontSize: '0.88rem', color: 'var(--text-main)', fontWeight: 700 }}>Have questions?</h5>
                 <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>BOOKCASE Sanctuary Guide</span>
               </div>
             </div>

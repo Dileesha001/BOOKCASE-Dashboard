@@ -71,7 +71,7 @@ export default function InventoryTab({
       {/* Upper Controls & Summary */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
-          <h3 className="heading-serif" style={{ fontSize: '1.4rem', margin: 0, color: '#FFF' }}>
+          <h3 className="heading-serif" style={{ fontSize: '1.4rem', margin: 0, color: 'var(--text-main)' }}>
             Sanctuary Book Inventory Catalogue
           </h3>
           <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
@@ -218,7 +218,7 @@ export default function InventoryTab({
                 <td className="text-left" style={{ padding: '0.9rem 1rem' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                      <span style={{ fontFamily: 'var(--font-serif)', fontSize: '0.95rem', fontWeight: 700, color: '#FFF' }}>
+                      <span style={{ fontFamily: 'var(--font-serif)', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-main)' }}>
                         {book.title}
                       </span>
                       {book.featured && (
@@ -276,7 +276,7 @@ export default function InventoryTab({
                         </span>
                       </>
                     ) : (
-                      <span style={{ fontWeight: 700, color: '#FFF', fontSize: '0.9rem' }}>
+                      <span style={{ fontWeight: 700, color: 'var(--text-main)', fontSize: '0.9rem' }}>
                         LKR {book.price.toLocaleString()}
                       </span>
                     )}

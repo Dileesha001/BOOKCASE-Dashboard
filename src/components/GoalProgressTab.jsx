@@ -135,7 +135,7 @@ export default function GoalProgressTab({ goals, setGoals }) {
             </div>
 
             <div>
-              <h4 style={{ fontSize: '1.1rem', margin: '0 0 0.4rem 0', color: '#FFF' }}>
+              <h4 style={{ fontSize: '1.1rem', margin: '0 0 0.4rem 0', color: 'var(--text-main)' }}>
                 {goal.title}
               </h4>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', color: 'var(--text-muted)' }}>
@@ -177,7 +177,7 @@ export default function GoalProgressTab({ goals, setGoals }) {
         }}>
           <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(212, 160, 23, 0.15)' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Daily Active Readers</span>
-            <h3 style={{ fontSize: '1.5rem', color: '#FFF', margin: '0.2rem 0' }}>3,420 Readers</h3>
+            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)', margin: '0.2rem 0' }}>3,420 Readers</h3>
             <span style={{ fontSize: '0.75rem', color: '#34D399' }}>+14% vs last week</span>
           </div>
 
@@ -189,7 +189,7 @@ export default function GoalProgressTab({ goals, setGoals }) {
 
           <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(212, 160, 23, 0.15)' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Mobile App Rating</span>
-            <h3 style={{ fontSize: '1.5rem', color: '#FFF', margin: '0.2rem 0' }}>4.9 ★</h3>
+            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)', margin: '0.2rem 0' }}>4.9 ★</h3>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>From 1,280 reviews</span>
           </div>
         </div>

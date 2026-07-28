@@ -580,6 +580,58 @@ body {
   border: 1px solid rgba(16, 185, 129, 0.3) !important;
 }
 
+/* 3D Color Metric Cards - Light Theme Overrides */
+[data-theme="light"] .card-3d-depth {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="light"] .card-3d-depth:hover {
+  transform: translateY(-4px) scale(1.01) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09), inset 0 1px 2px rgba(255, 255, 255, 1) !important;
+}
+
+[data-theme="light"] .card-3d-gold {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%) !important;
+  color: #78350F !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .card-3d-purple {
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%) !important;
+  color: #4C1D95 !important;
+  border: 1px solid rgba(124, 58, 237, 0.35) !important;
+}
+
+[data-theme="light"] .card-3d-blue {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #BFDBFE 100%) !important;
+  color: #1E3A8A !important;
+  border: 1px solid rgba(59, 130, 246, 0.35) !important;
+}
+
+[data-theme="light"] .card-3d-cyan {
+  background: linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 50%, #A5F3FC 100%) !important;
+  color: #164E63 !important;
+  border: 1px solid rgba(6, 182, 212, 0.35) !important;
+}
+
+[data-theme="light"] .card-3d-teal {
+  background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 50%, #99F6E4 100%) !important;
+  color: #115E59 !important;
+  border: 1px solid rgba(20, 184, 166, 0.35) !important;
+}
+
+[data-theme="light"] .card-3d-amber {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 50%, #FED7AA 100%) !important;
+  color: #7C2D12 !important;
+  border: 1px solid rgba(249, 115, 22, 0.35) !important;
+}
+
+[data-theme="light"] .card-3d-emerald {
+  background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 50%, #A7F3D0 100%) !important;
+  color: #064E3B !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+}
+
 [data-theme="light"] .nav-pills-container {
   background: rgba(241, 245, 249, 0.92);
   border: 1px solid rgba(124, 58, 237, 0.28);

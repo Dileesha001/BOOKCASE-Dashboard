@@ -199,7 +199,7 @@ export default function SalesTab({
             {genreDistribution.map((item) => (
               <div key={item.genre}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', marginBottom: '0.35rem' }}>
-                  <span style={{ color: '#FFF', fontWeight: 500 }}>{item.genre}</span>
+                  <span style={{ color: 'var(--text-main)', fontWeight: 500 }}>{item.genre}</span>
                   <span style={{ color: item.color, fontWeight: 700 }}>{item.percentage}% ({item.sales} sold)</span>
                 </div>
                 <div className="progress-bar-bg">
@@ -239,7 +239,7 @@ export default function SalesTab({
                     height: '28px',
                     borderRadius: '50%',
                     background: index === 0 ? 'var(--gold-primary)' : 'rgba(255,255,255,0.1)',
-                    color: index === 0 ? '#050c08' : '#FFF',
+                    color: index === 0 ? '#050c08' : 'var(--text-main)',
                     fontWeight: 700,
                     fontSize: '0.8rem',
                     display: 'flex',
@@ -250,7 +250,7 @@ export default function SalesTab({
                     #{index + 1}
                   </div>
                   <div>
-                    <h5 style={{ margin: 0, fontSize: '0.9rem', color: '#FFF' }}>{book.title}</h5>
+                    <h5 style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-main)' }}>{book.title}</h5>
                     <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{book.author} • {book.category}</span>
                   </div>
                 </div>
@@ -297,7 +297,7 @@ export default function SalesTab({
                 <td className="text-left" style={{ fontWeight: 600, color: 'var(--text-gold)' }}>{tx.id}</td>
                 <td className="text-left" style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>{tx.date}</td>
                 <td className="text-left" style={{ fontWeight: 500 }}>{tx.customer}</td>
-                <td className="text-left" style={{ color: '#FFF' }}>{tx.bookTitle}</td>
+                <td className="text-left" style={{ color: 'var(--text-main)' }}>{tx.bookTitle}</td>
                 <td className="text-center">{tx.qty}</td>
                 <td className="text-left">
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{tx.paymentMethod}</span>
